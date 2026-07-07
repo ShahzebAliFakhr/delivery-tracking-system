@@ -103,8 +103,6 @@ Delivery Tracking System
 │   ├── route.js
 │   ├── animation.js
 │   └── app.js
-│
-└── assets
 ```
 
 ---
