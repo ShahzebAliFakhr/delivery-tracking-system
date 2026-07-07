@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delivery Tracking System</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h1>
+
+<i class="fa-solid fa-truck-fast"></i>
+
+Delivery Tracker
+
+</h1>
+
+<p>
+Smart Delivery Tracking System
+</p>
+
+</div>
+
+<!-- SEARCH -->
+
+<div class="card">
+
+<label>
+
+Customer Location
+
+</label>
+
+<div class="searchBox">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Search Area">
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+<div
+id="suggestions"
+class="suggestions">
+
+</div>
+
+</div>
+
+<!-- ORDER -->
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-box"></i>
+
+Order
+
+</h2>
+
+<div class="infoRow">
+
+<span>Order ID</span>
+
+<b id="orderId">
+KM-1001
+</b>
+
+</div>
+
+<div class="infoRow">
+
+<span>Status</span>
+
+<b id="deliveryStatus">
+
+Waiting...
+
+</b>
+
+</div>
+
+<div class="infoRow">
+
+<span>ETA</span>
+
+<b id="eta">
+
+--
+
+</b>
+
+</div>
+
+<div class="infoRow">
+
+<span>Distance</span>
+
+<b id="distance">
+
+--
+
+</b>
+
+</div>
+
+<div class="infoRow">
+
+<span>Remaining</span>
+
+<b id="remaining">
+
+--
+
+</b>
+
+</div>
+
+</div>
+
+<!-- Rider -->
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-motorcycle"></i>
+
+Rider
+
+</h2>
+
+<div class="rider">
+
+<img
+src="https://i.pravatar.cc/120?img=12">
+
+<div>
+
+<h3>
+Ali Raza
+</h3>
+
+<p>
+Honda 125
+</p>
+
+<p>
+KHI-2489
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Progress -->
+
+<div class="card">
+
+<h2>
+
+Delivery Progress
+
+</h2>
+
+<div class="progress">
+
+<div
+id="progressBar">
+
+</div>
+
+</div>
+
+<div
+id="progressText">
+
+0%
+
+</div>
+
+</div>
+
+<!-- Timeline -->
+
+<div class="card">
+
+<h2>
+
+Timeline
+
+</h2>
+
+<ul
+id="timeline">
+
+<li>Waiting for route...</li>
+
+</ul>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="card buttons">
+
+<button
+id="startRoute">
+
+<i class="fa-solid fa-route"></i>
+
+Start Route
+
+</button>
+
+<button
+id="followBtn">
+
+<i class="fa-solid fa-location-crosshairs"></i>
+
+Follow Rider
+
+</button>
+
+<button
+id="themeBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+Dark Mode
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ================= MAP ================= -->
+
+<div class="mapContainer">
+
+<div id="map">
+
+</div>
+
+<!-- Floating Card -->
+
+<div class="floating">
+
+<div>
+
+<h3>
+
+Live Tracking
+
+</h3>
+
+<p id="clock">
+
+00:00
+
+</p>
+
+</div>
+
+<button
+id="centerBtn">
+
+<i class="fa-solid fa-location-dot"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Toast -->
+
+<div
+id="toast">
+
+Notification
+
+</div>
+
+<!-- Loading -->
+
+<div
+id="loader">
+
+<div class="spinner">
+
+</div>
+
+</div>
+
+<!-- Leaflet -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- JS -->
+
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/map.js"></script>
+<script src="js/search.js"></script>
+<script src="js/route.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
